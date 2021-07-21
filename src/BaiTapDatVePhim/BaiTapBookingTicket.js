@@ -25,7 +25,7 @@ export default class BaiTapBookingTicket extends Component {
                             <div className="col-8 text-center">
                                 <div className="text-warning display-4">ĐẶT VÉ XEM PHIM</div>
                                 <div className="mt-3 text-light" style={{fontSize:'25px'}}>Màn Hình</div>
-                                <div className="mt-2" style={{display:'flex',flexDirection:'row',justifyContent:'center'}}>
+                                <div className="mt-2" style={{display:'flex',flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
                                     <div className="screen"></div>
                                     
                                 </div>
