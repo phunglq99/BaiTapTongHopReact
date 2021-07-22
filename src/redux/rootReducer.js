@@ -1,10 +1,11 @@
 import {combineReducers, createStore} from 'redux';
 import BaiTapOanTuXiReducer from './BaiTapOanTuXiReducer'
-
+import BaiTapDatVeReducer from './BaiTapDatVeReducer';
 
 const rootReducer = combineReducers({
     //Liệt kê state của ứng dụng
     BaiTapOanTuXiReducer,
+    BaiTapDatVeReducer
     //...Rất nhiều state cho từng nghiệp vụ
 });
 
