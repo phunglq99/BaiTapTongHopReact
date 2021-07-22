@@ -1,3 +1,5 @@
+import { HUY_GHE } from "./types/BaiTapDatVeType";
+
 const stateDefault ={
     danhSachGheDangDat:[
         // {soGhe:'A1',gia:1000}
@@ -16,6 +18,15 @@ const BaiTapDatVeReducer =(state=stateDefault, action)=>{
             }
             //Cập nhật lại state giao diện render lại
             state.danhSachGheDangDat = danhSachGheDangDatUpdate;
+            return {...state}
+        }
+        case HUY_GHE:{
+            let danhSachGheDangDatUpdate =[...state.danhSachGheDangDat];
+            let index = danhSachGheDangDatUpdate.findIndex(gheDangDat=> gheDangDat.soGhe === action.soGhe);
+            if(index !== -1){//Nếu người dùng click gghế đang đặt có trong mảng => remove đi
+                danhSachGheDangDatUpdate.splice(index,1);
+            }
+            state.danhSachGheDangDat =danhSachGheDangDatUpdate;
             return {...state}
         }
 
